@@ -26,9 +26,9 @@ schema_view = get_schema_view(
         title="Event Ticketing System",
         default_version="v1",
         description="An event ticketing system for event sellouts",
-        terms_of_service="www.kerryonyeogoportfolio.netlify.app",
-        contact=openapi.Contact(email="kerryonyeogo@gmail.com", name="Onyeogo Kerry"),
-        license=openapi.License(name="Onyeogo Kerry")
+        terms_of_service="https://jakendai.netlify.app",
+        contact=openapi.Contact(email="m.ndai.elloe.ai", name="Michael Ndai"),
+        license=openapi.License(name="Michael Ndai")
     ),
     public=True,
     permission_classes=(permissions.AllowAny,)
@@ -46,5 +46,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, 
-                          document_root=settings.STATIC_ROOT)

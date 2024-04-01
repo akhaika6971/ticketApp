@@ -22,8 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
-
+SECRET_KEY = 'django-insecure-(%2i*xlcgu7*ee2_^hg40y9@z=fn2$z#u6kanfd2bd7c&d!(75'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -75,6 +74,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'TicketingSystem.wsgi.application'
 
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_CREDENTIALS = False
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -110,6 +120,17 @@ SWAGGER_SETTINGS = {
     "USE_SESSION_AUTH": False,
 }
 
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_CREDENTIALS = False
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
 
 
 
@@ -143,14 +164,26 @@ USE_I18N = True
 
 USE_TZ = True
 
+CORS_ORIGIN_WHITELIST = [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://ad1d-41-80-112-187.ngrok-free.app/"
+
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
+    'https://ad1d-41-80-112-187.ngrok-free.app/'
+    ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# STATIC_URL = 'static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 MEDIA_URL = "/media/"

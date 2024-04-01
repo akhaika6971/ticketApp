@@ -20,16 +20,16 @@ class HostProfileModelTestCase(TestSetup):
         host_profile_serializer = HostUserProfileSerializer(data={
             'company_name': 'AT & T',
             'company_description': 'Mobile Electronic company',
-            'website_url': 'https://atandt.com/',
-            'phone_number': '+2348109283458',
+            'website_url': 'https://botus.tech/',
+            'phone_number': '+2548109283458',
             'address': '123 Pharell close',
             'city': 'Southampton',
             'state': 'London',
             'country': 'United Kingdom',
             'zip_code': '12032',
-            'twitter': 'https://x.com/atandt/',
-            'facebook': 'https://facebook.com/atandt/',
-            'instagram': 'https://instagram.com/atandt/'
+            'twitter': 'https://x.com/',
+            'linkedin': 'https://linkdedin.com/',
+            'instagram': 'https://instagram.com/'
         })
         host_profile_serializer.is_valid(raise_exception=True)
         self.host_profile = host_profile_serializer.save(user=self.create_test_user())

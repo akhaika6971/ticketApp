@@ -15,9 +15,9 @@ class AuthTestCase(APITestSetup):
     def test_user_sign_up(self):
         url = reverse("create-account")
         user_data = {
-            "email": "patrickonyeogo@gmail.com",
-            "password": "Akpororo1",
-            "password2": "Akpororo1"
+            "email": "testuser@gmail.com",
+            "password": "jakendai7",
+            "password2": "jakendai7"
         }
         res = self.client.post(url, user_data)
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
@@ -34,7 +34,7 @@ class AuthTestCase(APITestSetup):
     def test_login_user_with_invalid_credentials(self):
         login_data = {
             "email": "test@test.com",
-            "password": "Akpororo1"
+            "password": "testuser"
         }
         res = self.client.post(reverse("token_obtain_pair"), login_data)
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
@@ -57,16 +57,16 @@ class HostProfileTestCase(APITestSetup):
         host_profile_serializer = HostUserProfileSerializer(data={
             'company_name': 'AT & T',
             'company_description': 'Mobile Electronic company',
-            'website_url': 'https://atandt.com/',
-            'phone_number': '+2348109283458',
+            'website_url': 'https://botus.tech/',
+            'phone_number': '+2548109283458',
             'address': '123 Pharell close',
             'city': 'Southampton',
             'state': 'London',
             'country': 'United Kingdom',
             'zip_code': '12032',
-            'twitter': 'https://x.com/atandt/',
-            'facebook': 'https://facebook.com/atandt/',
-            'instagram': 'https://instagram.com/atandt/'
+            'twitter': 'https://x.com/',
+            'facebook': 'https://facebook.com/',
+            'instagram': 'https://instagram.com/'
         })
         host_profile_serializer.is_valid(raise_exception=True)
         self.host_profile = host_profile_serializer.save(user=self.superuser)
@@ -80,7 +80,7 @@ class HostProfileTestCase(APITestSetup):
             'company_name': 'Amazon',
             'company_description': 'Mobile Electronic company',
             'website_url': 'https://amazon.com/',
-            'phone_number': '+2348109283458',
+            'phone_number': '+2548109283458',
             'address': '123 Pharell close',
             'city': 'Southampton',
             'state': 'London',

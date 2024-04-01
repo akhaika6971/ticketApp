@@ -12,12 +12,6 @@ It uses Paystack as for its's Payment Integration.
 ## Installation
 To run this project, you need to have Python 3.8+, Node.js, and PostgreSQL installed on your machine.
 
-* Clone the repository:
-
-```
-git clone https://github.com/kerry407/ticket-system.git
-```
-
 * Change into the cloned repository:
 
 ```

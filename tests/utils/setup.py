@@ -30,7 +30,7 @@ class TestSetup(TestCase):
     def create_test_superuser(self, **kwargs: Dict[str, Any]) -> CustomUser:
         user = User.objects.create_superuser(
             email='test2@test.com', first_name='test',
-            last_name='test&test', password="Akpororo1", 
+            last_name='test&test', password="testuser@123", 
             event_hoster=True
         )
         return user
@@ -61,7 +61,7 @@ class APITestSetup(APITestCase):
     
     def create_test_superuser(self, **kwargs: Dict[str, Any]) -> CustomUser:
         user = User.objects.create_superuser(
-            email='test2@test.com',  password="Akpororo1", 
+            email='test2@test.com',  password="testuser@123", 
         )
         return user
     

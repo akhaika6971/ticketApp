@@ -7,12 +7,12 @@ class EventModelTestCase(TestSetup):
     def setUp(self) -> None:
         event_serializer = EventSerializer(data={
             "title": "Bridging the gap between Finance and Technology",
-            "event_start_date": "2023-10-30",
+            "event_start_date": "2024-10-30",
             "event_start_time": "12:00:00",
-            "event_end_date": "2023-11-01",
+            "event_end_date": "2024-11-01",
             "event_end_time": "06:00:00",
-            "location": "Lagos",
-            "address": "16, Fawobi Street, Allen Avenue, Ikeja",
+            "location": "Nairobi",
+            "address": "8, Kaburu Drive, Pine Tree, Kilimani",
             "category": [
                 "Technology"
             ],

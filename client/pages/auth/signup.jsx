@@ -5,7 +5,7 @@ import Link from 'next/link'
 const signup = () => {
   return (
     <div className={`${styles.login} ${styles.signup}`}>
-    <h1>Get-Ticketz</h1>
+    <h1>Get-Tickets</h1>
     <form action="">
         <h2>Create An Account</h2>
     

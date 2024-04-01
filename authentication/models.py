@@ -12,7 +12,14 @@ class CustomUser(AbstractUser):
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     email = models.EmailField(_('email address'), unique=True)
     event_hoster = models.BooleanField(default=False)
-    
+
+    GENDER_CHOICES = [
+        ('Male', 'male'),
+        ('Female', 'female'),
+        ('Binary', 'binary'),
+    ]
+    gender =  models.CharField(max_length=20, choices=GENDER_CHOICES, default='male')
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     

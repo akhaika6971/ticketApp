@@ -10,10 +10,10 @@ const Hero = () => {
       <div className={styles.banner}>
         <div>
           <div className={styles.date}>
-            <div>23</div>
-            <div>05</div>
-            <div>MAY<br /></div> 
-            <div>2023</div>
+            <div>13</div>
+            <div>03</div>
+            <div>MARCH<br /></div> 
+            <div>2024</div>
           </div>
         </div>
         <div>

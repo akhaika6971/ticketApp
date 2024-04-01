@@ -10,3 +10,6 @@ if os.getenv('DJANGO_DEVELOPMENT') == 'true':
    from .dev import *
 else:
    from .prod import *
+
+
+

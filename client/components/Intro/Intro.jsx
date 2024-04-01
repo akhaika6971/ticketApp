@@ -19,12 +19,12 @@ const Intro = () => {
 
         <div>
         <i className="fa-solid fa-ticket"></i>
-          <h2>Get ticketz!</h2>
+          <h2>Get tickets!</h2>
           <span>Sent to your email</span>
         </div>
       </div>
       <div className={styles.heading}>
-      <h2>Popular Events in <span>Abuja</span></h2>
+      <h2>Popular Events in <span>Nairobi</span></h2>
       <h3>Filter by Category</h3>
       </div>
 

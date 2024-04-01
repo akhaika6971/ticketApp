@@ -6,7 +6,7 @@ const Header = () => {
     const router = useRouter()
   return (
     <header  style={{display: router.pathname === "/auth/login" || router.pathname === "/auth/signup" ? 'none':'flex'}} className={styles.header}>
-    <div><h1>Get-Ticketz</h1></div>
+    <div><h1>Get-Tickets</h1></div>
     <div>
       <ul>
         <li><input placeholder='Search Event....' type="search" name="" id="" /></li>
